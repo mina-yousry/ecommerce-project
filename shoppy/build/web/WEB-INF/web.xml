@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+   
+    <filter>
+        <filter-name>CookiesCheckFilter</filter-name>
+        <filter-class>userfilters.CookiesCheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CookiesCheckFilter</filter-name>
+        <url-pattern>/Home.jsp</url-pattern>
+        <url-pattern>/Cart.jsp</url-pattern>
+        <url-pattern>/Profile.jsp</url-pattern>
+        <url-pattern>/Search.jsp</url-pattern>
+        <url-pattern>/Single.jsp</url-pattern>
+        <!--<url-pattern>/*</url-pattern>-->
+    </filter-mapping>
+    <filter>
+        <filter-name>SignInFilter</filter-name>
+        <filter-class>userfilters.SignInFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SignInFilter</filter-name>
+        <url-pattern>/SignIn.jsp</url-pattern>
+    </filter-mapping>
+<!--    <filter>
+        <filter-name>UserFilter</filter-name>
+        <filter-class>userfilters.UserFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UserFilter</filter-name>
+        <url-pattern>/CartProductAddition</url-pattern>
+        <url-pattern>/CartProductRemoval</url-pattern>
+        <url-pattern>/Cart.jsp</url-pattern>
+        <url-pattern>/Profile.jsp"</url-pattern>
+    
+    </filter-mapping>-->
+
+
+</web-app>
